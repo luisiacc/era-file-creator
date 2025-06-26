@@ -26,7 +26,7 @@ const App: React.FC = () => {
         }
         current = current[key];
       }
-      
+
       const lastKey = keys[keys.length - 1];
       if (current) {
          current[lastKey] = value;
@@ -35,7 +35,7 @@ const App: React.FC = () => {
       return newData;
     });
   };
-  
+
   const handleAddClaim = () => {
     setEraData(prev => {
       const newData = JSON.parse(JSON.stringify(prev));
@@ -109,7 +109,7 @@ const App: React.FC = () => {
       return newData;
     });
   };
-  
+
   const handleAddAdjustment = (claimIndex: number, serviceLineIndex: number) => {
     setEraData(prev => {
       const newData = JSON.parse(JSON.stringify(prev));
@@ -122,7 +122,7 @@ const App: React.FC = () => {
       return newData;
     });
   };
-  
+
   const handleRemoveAdjustment = (claimIndex: number, serviceLineIndex: number, adjustmentIndex: number) => {
     setEraData(prev => {
       const newData = JSON.parse(JSON.stringify(prev));
@@ -143,7 +143,7 @@ const App: React.FC = () => {
         return newData;
     });
   };
-  
+
   const handleRemoveClaimAdjustment = (claimIndex: number, adjustmentIndex: number) => {
     setEraData(prev => {
         const newData = JSON.parse(JSON.stringify(prev));
@@ -223,13 +223,13 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
-        
+        </Section>
+
         {eraData.claims.map((claim, index) => (
-          <ClaimForm 
-            key={claim.id} 
-            claim={claim} 
-            index={index} 
+          <ClaimForm
+            key={claim.id}
+            claim={claim}
+            index={index}
             handleInputChange={handleInputChange}
             onRemoveClaim={() => handleRemoveClaim(index)}
             onAddServiceLine={handleAddServiceLine}
