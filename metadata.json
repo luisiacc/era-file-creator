@@ -1,0 +1,5 @@
+{
+  "name": "ERA 835 File Generator",
+  "description": "A frontend application to create and download standardized ERA (EDI 835) files for testing purposes. Users can input details for payers, payees, claims, and service lines to generate a valid file.",
+  "requestFramePermissions": []
+}
